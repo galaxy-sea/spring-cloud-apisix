@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  plus.wcj.apisix.core.client.ApisixApiAutoConfiguration
+

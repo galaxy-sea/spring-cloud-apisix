@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  plus.wcj.apisix.loadbalancer.ApisixLoadBalancerAutoConfiguration
+
+

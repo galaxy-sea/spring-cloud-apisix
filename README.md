@@ -16,8 +16,8 @@
   
 Spring Cloud APISIX is a Spring Cloud framework based on Apache APISIX
   
-> 目前经测试过`Apache APISIX 2.14`, 其他版本并未经过测试，建议不要用于生产环境哦！！！
-  
+> 目前仅测试过`Apache APISIX 2.14`, 其他版本并未经过测试，建议不要用于生产环境哦！！！
+> Spring Cloud APISIX还未发布到maven仓库, 想尝鲜的道友们只能自己本地运行哦
   
 > 注册逻辑:
 

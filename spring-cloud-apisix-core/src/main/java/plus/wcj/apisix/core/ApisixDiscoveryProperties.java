@@ -52,7 +52,7 @@ public class ApisixDiscoveryProperties {
 	/**
 	 * Weight of upstream node.
 	 */
-	private float weight = 1;
+	private int weight = 1;
 
 	/**
 	 * Use ip address rather than hostname during registration.
@@ -150,11 +150,11 @@ public class ApisixDiscoveryProperties {
 		this.service = service;
 	}
 
-	public float getWeight() {
+	public int getWeight() {
 		return weight;
 	}
 
-	public void setWeight(float weight) {
+	public void setWeight(int weight) {
 		this.weight = weight;
 	}
 

@@ -28,7 +28,7 @@ public class SimpleUpstreamCustomizer implements UpstreamCustomizer<ApisixRegist
 	@Override
 	public void init(ApisixRegistration registration, ObjectNode requestBody) {
 		String node = registration.getHost() + ":" + registration.getPort();
-		float weight = registration.getApisixDiscoveryProperties().getWeight();
+		int weight = registration.getApisixDiscoveryProperties().getWeight();
 		// @formatter:off
 		requestBody.put("type", "roundrobin")
 			.put("name", registration.getServiceId())
@@ -49,7 +49,7 @@ public class SimpleUpstreamCustomizer implements UpstreamCustomizer<ApisixRegist
 	@Override
 	public void register(ApisixRegistration registration, ObjectNode requestBody) {
 		String node = registration.getHost() + ":" + registration.getPort();
-		float weight = registration.getApisixDiscoveryProperties().getWeight();
+		int weight = registration.getApisixDiscoveryProperties().getWeight();
 		// @formatter:off
 		requestBody.putObject("nodes")
 			.put(node, weight);
@@ -57,7 +57,7 @@ public class SimpleUpstreamCustomizer implements UpstreamCustomizer<ApisixRegist
 	}
 
 	@Override
-	public void status(ApisixRegistration registration, float weight, ObjectNode requestBody) {
+	public void status(ApisixRegistration registration, int weight, ObjectNode requestBody) {
 		String node = registration.getHost() + ":" + registration.getPort();
 		// @formatter:off
 		requestBody.putObject("nodes")

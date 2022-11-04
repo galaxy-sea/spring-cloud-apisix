@@ -66,7 +66,7 @@ public interface UpstreamCustomizer<T extends Registration> {
 	 * @param status node status
 	 * @param requestBody data in json format
 	 */
-	default void status(T registration, float status, ObjectNode requestBody) {
+	default void status(T registration, int status, ObjectNode requestBody) {
 
 	}
 

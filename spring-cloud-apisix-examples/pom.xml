@@ -12,8 +12,9 @@
 	<artifactId>spring-cloud-apisix-examples</artifactId>
 	<packaging>pom</packaging>
     <modules>
-        <module>spring-cloud-apisix-discovery-example</module>
+		<module>devtools-example</module>
 		<module>provider-example</module>
+        <module>spring-cloud-apisix-discovery-example</module>
 	</modules>
 
 

@@ -38,6 +38,12 @@
 				<version>${project.version}</version>
 			</dependency>
 
+			<dependency>
+				<groupId>plus.wcj</groupId>
+				<artifactId>spring-cloud-apisix-devtools</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 	<profiles>

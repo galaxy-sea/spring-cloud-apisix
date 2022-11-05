@@ -298,9 +298,10 @@ public class ConsumerGatewayExampleApplication {
 
 [健康检查](https://apisix.apache.org/zh/docs/apisix/tutorials/health-check/#%E6%8F%8F%E8%BF%B0) 相关的issues [issues/7964](https://github.com/apache/apisix/issues/7964)，[issues/7141](https://github.com/apache/apisix/issues/7141)
 
-实际体验的感觉就是Upstream的node节点太少无法触发健康检查，你没有任何请求使用Upstream就无法触发健康检查
+实际体验的感觉就是Upstream的node节点太少无法触发健康检查，你没有任何请求使用Upstream就无法触发健康检查。
 
-`spring-cloud-apisix-devtools`会自动注册在servlet容器（Tomcat、Jetty、Undertow）启动的时随机增加两个端口（1000-65535），然后把这两个端口一起注册到`Apache APISIX`
+1. `spring-cloud-apisix-devtools`会自动注册在servlet容器（Tomcat、Jetty、Undertow）启动的时随机增加两个端口（1000-65535），然后把这两个端口一起注册到`Apache APISIX`
+2. 在注册完成后会主动请求一下健康检查的路由
 
 
 > pom.xml
@@ -337,6 +338,7 @@ spring:
         active-health-check-path: /hello
         token: edd1c9f034335f136f87ad84b625c8f1
       devtools:
+        gateway-address: http://nuc8i7.wcj.plus:9080
         ports:
           - 28080
           - 38080
@@ -359,5 +361,9 @@ public class DevtoolsExampleApplication {
 
 Spring Boot启动后日志会提示
 ``` log
+// 多端口
 o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) 28080 (http) 38080 (http) 48080 (http) with context path ''
+
+// 主动触发
+p.w.a.d.h.trigger.AutoHealthTrigger      : Apisix devtools healthcheck
 ```

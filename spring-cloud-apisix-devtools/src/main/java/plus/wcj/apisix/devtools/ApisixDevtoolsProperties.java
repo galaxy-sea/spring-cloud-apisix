@@ -29,12 +29,32 @@ public class ApisixDevtoolsProperties {
 	private Integer[] ports = new Integer[] { ThreadLocalRandom.current().nextInt(10000, 65535),
 			ThreadLocalRandom.current().nextInt(10000, 65535) };
 
+	private String gatewayAddress = "http://127.0.0.1:9082";
+
+	private int healthTriggerQuantity = 10;
+
 	public Integer[] getPorts() {
 		return ports;
 	}
 
 	public void setPorts(Integer[] ports) {
 		this.ports = ports;
+	}
+
+	public int getHealthTriggerQuantity() {
+		return healthTriggerQuantity;
+	}
+
+	public void setHealthTriggerQuantity(int healthTriggerQuantity) {
+		this.healthTriggerQuantity = healthTriggerQuantity;
+	}
+
+	public String getGatewayAddress() {
+		return gatewayAddress;
+	}
+
+	public void setGatewayAddress(String gatewayAddress) {
+		this.gatewayAddress = gatewayAddress;
 	}
 
 }

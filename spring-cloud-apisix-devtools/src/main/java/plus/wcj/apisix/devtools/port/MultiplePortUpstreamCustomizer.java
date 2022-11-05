@@ -14,10 +14,11 @@
  * limitations under the License.
  */
 
-package plus.wcj.apisix.devtools;
+package plus.wcj.apisix.devtools.port;
 
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import plus.wcj.apisix.core.customizer.UpstreamCustomizer;
+import plus.wcj.apisix.devtools.ApisixDevtoolsProperties;
 import plus.wcj.apisix.serviceregistry.ApisixRegistration;
 
 import org.springframework.core.annotation.Order;

@@ -14,7 +14,10 @@
  * limitations under the License.
  */
 
-package plus.wcj.apisix.devtools;
+package plus.wcj.apisix.devtools.port;
+
+import plus.wcj.apisix.core.ConditionalOnApisixDiscoveryEnabled;
+import plus.wcj.apisix.devtools.ApisixDevtoolsProperties;
 
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -28,6 +31,7 @@ import org.springframework.context.annotation.Import;
  * @author changjin wei(魏昌进)
  */
 @Configuration(proxyBeanMethods = false)
+@ConditionalOnApisixDiscoveryEnabled
 @AutoConfigureBefore(ServletWebServerFactoryAutoConfiguration.class)
 @EnableConfigurationProperties(ApisixDevtoolsProperties.class)
 @Import({ MultiplePortServletWebServerFactoryConfiguration.EmbeddedTomcat.class,

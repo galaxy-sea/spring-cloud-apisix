@@ -36,14 +36,21 @@
 	<dependencies>
 
 		<dependency>
-			<groupId>plus.wcj</groupId>
-			<artifactId>spring-cloud-starter-apisix-discovery</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<optional>true</optional>
 		</dependency>
 
+		<dependency>
+			<groupId>plus.wcj</groupId>
+			<artifactId>spring-cloud-starter-apisix-discovery</artifactId>
+			<optional>true</optional>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-autoconfigure</artifactId>
+			<optional>true</optional>
 		</dependency>
 
 		<dependency>

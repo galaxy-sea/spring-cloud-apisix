@@ -98,12 +98,12 @@ public class ApisixDiscoveryProperties {
 	/**
 	 * Enable active health check when creating upstream.
 	 */
-	private boolean activeHealthCheck = false;
+	private boolean activeHealthCheck = true;
 
 	/**
 	 * Enable passive health check when creating upstream.
 	 */
-	private boolean passiveHealthCheck = false;
+	private boolean passiveHealthCheck = true;
 
 	/**
 	 * Path to enable active health check when creating upstream.

@@ -20,6 +20,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * @author changjin wei(魏昌进)
@@ -32,9 +33,26 @@ public class HelloController {
 	@Autowired
 	private HelloClient helloClient;
 
+	@Autowired
+	private RestTemplate restTemplate;
+
+	// @Autowired
+	// private WebClient.Builder webClientBuilder;
+
 	@GetMapping
 	public String hello() {
 		return helloClient.hello();
 	}
+
+	@GetMapping("servlet")
+	public String servlet() {
+		return restTemplate.getForObject("http://provider-example/hello", String.class);
+	}
+
+	// @GetMapping("reactive")
+	// public Mono<String> reactive() {
+	// return webClientBuilder.build().get().uri("http://provider-example/hello")
+	// .retrieve().bodyToMono(String.class);
+	// }
 
 }

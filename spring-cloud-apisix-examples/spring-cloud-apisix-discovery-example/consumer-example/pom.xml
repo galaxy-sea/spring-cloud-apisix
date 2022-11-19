@@ -5,7 +5,7 @@
 	<parent>
 		<artifactId>spring-cloud-apisix-discovery-example</artifactId>
 		<groupId>plus.wcj</groupId>
-		<version>2021.0.1-SNAPSHOT</version>
+		<version>${revision}</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 

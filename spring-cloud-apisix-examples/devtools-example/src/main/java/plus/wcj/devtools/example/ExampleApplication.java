@@ -23,10 +23,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author changjin wei(魏昌进)
  */
 @SpringBootApplication
-public class DevtoolsExampleApplication {
+public class ExampleApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DevtoolsExampleApplication.class, args);
+		SpringApplication.run(ExampleApplication.class, args);
 	}
 
 }

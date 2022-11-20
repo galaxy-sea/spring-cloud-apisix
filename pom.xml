@@ -21,7 +21,7 @@
 	</scm>
 	<properties>
 
-		<revision>2021.0.1-SNAPSHOT</revision>
+		<revision>2021.0.1-2.14-SNAPSHOT</revision>
 		<spring-cloud.version>2021.0.5</spring-cloud.version>
 		<spring-boot.version>2.6.11</spring-boot.version>
 		<main.basedir>${basedir}</main.basedir>
@@ -97,7 +97,7 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>org.springframework.cloud</groupId>
+				<groupId>wcj.plus</groupId>
 				<artifactId>spring-cloud-apisix-dependencies</artifactId>
 				<version>${revision}</version>
 				<type>pom</type>

@@ -45,6 +45,6 @@ public interface ControlApi {
 	 * @return respectBody
 	 */
 	@GetMapping("/healthcheck/upstreams/{id}")
-	ObjectNode getHealthcheckUpstream(@PathVariable String id);
+	ObjectNode getHealthcheckUpstream(@PathVariable("id") String id);
 
 }

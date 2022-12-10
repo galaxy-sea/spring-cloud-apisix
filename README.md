@@ -87,7 +87,7 @@ spring:
   cloud:
     apisix:
       discovery:
-        address: http://nuc8i7.wcj.plus:9080
+        address: http://nuc8i7.wcj.plus:9180
         control-address: http://nuc8i7.wcj.plus:9092
         active-health-check: true
         passive-health-check: true
@@ -157,7 +157,7 @@ spring:
   cloud:
     apisix:
       discovery:
-        address: http://nuc8i7.wcj.plus:9080
+        address: http://nuc8i7.wcj.plus:9180
         control-address: http://nuc8i7.wcj.plus:9092
         active-health-check: true
         passive-health-check: true
@@ -238,7 +238,7 @@ spring:
   cloud:
     apisix:
       discovery:
-        address: http://nuc8i7.wcj.plus:9080
+        address: http://nuc8i7.wcj.plus:9180
         control-address: http://nuc8i7.wcj.plus:9092
         active-health-check: true
         passive-health-check: true
@@ -249,7 +249,7 @@ spring:
           provider-example:
             scheme: HTTP
             host: nuc8i7.wcj.plus
-            port: 9080
+            port: 9180
     loadbalancer:
       configurations: apisix
 server:
@@ -331,14 +331,14 @@ spring:
   cloud:
     apisix:
       discovery:
-        address: http://nuc8i7.wcj.plus:9080
+        address: http://nuc8i7.wcj.plus:9180
         control-address: http://nuc8i7.wcj.plus:9092
         active-health-check: true
         passive-health-check: true
         active-health-check-path: /hello
         token: edd1c9f034335f136f87ad84b625c8f1
       devtools:
-        gateway-address: http://nuc8i7.wcj.plus:9080
+        gateway-address: http://nuc8i7.wcj.plus:9180
         ports:
           - 28080
           - 38080

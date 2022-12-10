@@ -4,7 +4,7 @@ spring:
   cloud:
     apisix:
       discovery:
-        address: http://nuc8i7.wcj.plus:9080
+        address: http://nuc8i7.wcj.plus:9180
         control-address: http://nuc8i7.wcj.plus:9092
         active-health-check: true
         passive-health-check: true
